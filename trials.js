@@ -84,6 +84,7 @@ function getRange(start, stop) {
   }
 }
 
+  return nums;
 
 // Given a string, return a string where vowels are replaced with '*'.
 //

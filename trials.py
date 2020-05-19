@@ -58,16 +58,47 @@ def print_as_numbered_list(items):
     return 
 
 def get_range(start, stop):
-    pass  # TODO: replace this line with your code
+    """Return an array of numbers in a certain range.
+    >>> get_range(0,5)
+    [0, 1, 2, 3, 4]
+    >>> get_range(1,3)
+    [1, 2]
+    """
+    nums = []
 
+    num = start
+    while start < stop: 
+        nums.append(start)
+        start += 1
+    
+    return nums 
 
 def censor_vowels(word):
-    pass  # TODO: replace this line with your code
+    """ Given a string, return a string where vowels are replaced with '*'.
+    >>> censor_vowels('hello world')
+    'h*ll* w*rld'
+    """
+
+    chars = []
+
+    for letter in word: 
+        if letter in 'aeiou':
+            chars.append('*')
+        else: 
+            chars.append(letter)
+    
+    return ''.join(chars)
 
 
 def snake_to_camel(string):
-    pass  # TODO: replace this line with your code
+    """ Given a string in snake case, return a string in upper camel case.
+    """
 
+    camel_case = []
+    for word in string.split('_'):
+        camel_case.append(f"{ word[0].upper() }{ word[1:] }")
+
+    return ''.join(camel_case)
 
 def longest_word_length(words):
     pass  # TODO: replace this line with your code
