@@ -14,7 +14,7 @@ function outputAllItems(items) {
 }
 
 
-// Given an array of numbers, return an array of all even numbers.
+// 
 //
 // Ex.:
 //   > getAllEvens([7, 8, 10, 1, 2, 2]);

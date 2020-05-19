@@ -2,20 +2,60 @@
 
 
 def output_all_items(items):
-    pass  # TODO: replace this line with your code
+    """Print each item in the given array
+    >>> output_all_items([1, 'hello', True])
+    1
+    hello
+    True
 
+    """
+    for item in items: 
+        print(item)
 
 def get_all_evens(nums):
-    pass  # TODO: replace this line with your code
+    """ Given an array of numbers, return an array of all even numbers.
+    
+    >>> get_all_evens([1,2,3,4,8,8,10])
+    [2, 4, 8, 8, 10]
+    """
+    even_nums = []
+
+    for num in nums:
+        if num % 2 == 0:
+            even_nums.append(num)
+    
+    return even_nums
 
 
 def get_odd_indices(items):
-    pass  # TODO: replace this line with your code
+    """Given an array, return all elements at odd numbered indices.
 
+    >>> get_odd_indices([1, 'hello', True, 500])
+    ['hello', 500]
+    """
+
+    result = []
+
+    for idx in range(len(items)):
+        if idx % 2 != 0:
+            result.append(items[idx])
+    
+    return result
 
 def print_as_numbered_list(items):
-    pass  # TODO: replace this line with your code
+    """Given an array, output a numbered list.
+    >>> print_as_numbered_list([1, 'hello', True])
+    1. 1
+    2. hello
+    3. True
+    """
+    
+    i = 1
 
+    for item in items:
+        print(f"{ i }. { item }")
+        i += 1
+    return 
 
 def get_range(start, stop):
     pass  # TODO: replace this line with your code
@@ -43,3 +83,7 @@ def has_balanced_parens(string):
 
 def compress(string):
     pass  # TODO: replace this line with your code
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
